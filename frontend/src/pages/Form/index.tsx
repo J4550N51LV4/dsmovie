@@ -1,4 +1,5 @@
-import './styles.css'
+import { Link } from 'react-router-dom';
+import './styles.css';
 
 function Form() {
 
@@ -22,7 +23,8 @@ function Form() {
                     </div>
                     <div className="form-group dsmovie-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
-                        <select className="form-control" id="score">
+                        <select className="form-control" id="score" >
+                            <option>Selecione...</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -34,7 +36,9 @@ function Form() {
                         <button className="btn btn-primary dsmovie-btn" type="submit">Salvar</button>
                     </div>
                 </form>
-                <button className="btn btn-primary dsmovie-btn" type="submit">Cancelar</button>
+                <Link to="/" >
+                    <button className="btn btn-primary dsmovie-btn" type="submit">Cancelar</button>
+                </Link>
             </div>
         </div>
     );
