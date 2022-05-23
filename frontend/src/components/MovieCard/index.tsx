@@ -11,10 +11,14 @@ function MovieCard() {
         count: 2,
         score: 4.5
     }
-/*
+/*      
+
+                                        https://www.themoviedb.org/
+
+
     const movie = {
         id: 2,
-        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
+        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/9Ngw106BLlNJ4iVpRHlrDfaLpCV.jpg",
         title: "Moonfall - Ameaça Lunar",
         count: 2,
         score: 4.5
