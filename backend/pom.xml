@@ -14,7 +14,9 @@
 	<name>dsmovie</name>
 	<description>Aprendendo Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>12</java.version>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>     
+	    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -35,7 +37,8 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
+
+ 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
