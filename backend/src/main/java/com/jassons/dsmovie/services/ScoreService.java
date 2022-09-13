@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.jassons.dsmovie.dto.MovieDTO;
 import com.jassons.dsmovie.dto.ScoreDTO;
 import com.jassons.dsmovie.entities.Movie;
 import com.jassons.dsmovie.entities.Score;
@@ -25,7 +26,7 @@ public class ScoreService {
 	private ScoreRepository scoreRepository;
 		
 	@Transactional
-	public void saveScore (ScoreDTO dto) {
+	public MovieDTO saveScore (ScoreDTO dto) {
 		
 		User user = userRepository.findByEmail(dto.getEmail());
 		
@@ -35,7 +36,9 @@ public class ScoreService {
 			user = userRepository.saveAndFlush(user);
 		}
 		
-		Movie movie = movieRepository.findById(dto.getId()).get();		//		o exemplo está com getMoveId...
+		Movie movie = movieRepository.findById(dto.getMoveId()).get();		//		o exemplo está com getMoveId...
+		
+//		Score score = new Score();
 		
 		Score score = new Score();
 		score.setMovie(movie);
@@ -55,6 +58,8 @@ public class ScoreService {
 		movie.setCount(movie.getScores().size());
 		
 		movie = movieRepository.save(movie);
+		
+		return new MovieDTO(movie);
 
 	}
 
